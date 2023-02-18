@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
+import { FaCartArrowDown } from 'react-icons/fa';
 
 export default function Home() {
     const settings = {
@@ -70,14 +71,37 @@ export default function Home() {
             <div className='grid grid-cols-12 gap-2'>
                 {
                     [1,2,3,4,5,6,7,8,9,10,11,12].map((item,i)=><div key={i} className='col-span-2 p-3 bg-white rounded hover:shadow-lg'>
-                    <img src="https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1" height="150px" />
-                    <h3 className='text-slate-500 text-base'>lorem ipsum dollar sit ammet, lorem ipsum dollar sit ammet...</h3>
+                        <Link to="/product/123/this-is-hp-monitor">
+                            <img src="https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1" height="150px" />
+                            <h3 className='text-slate-500 text-base'>lorem ipsum dollar sit ammet, lorem ipsum dollar sit ammet...</h3>
+                        </Link>
                 </div>)
                 }
             </div>
             <div className='flex justify-center mt-5'>
-                <button className='border-none outline-none px-2 py-1 text-sm font-semibold text-white bg-slate-900 rounded focus:outline-green-900'>see more</button>
+                <button className='border-none outline-none px-2 py-1 text-sm font-semibold text-white bg-slate-800 rounded focus:outline-green-900'>see more</button>
             </div>
+        </div>
+        <h3 className='text-xl font-bold text-slate-500 my-5'>New Arrival</h3>
+        <div className='my-5 grid grid-cols-12 gap-3'>
+            {
+                [1,2,3,4,5,6,7,8,9,10,11,12].map((item,i)=><div key={i} className='product-item col-span-2 p-3 bg-white rounded hover:shadow-lg'>
+                    <Link to="/product/123/this-is-hp-monitor">
+                        <img src="https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1200&format=pjpg&exif=1&iptc=1" style={{height:"200px",width:"100%",objectFit:"cover"}} />
+                        <h3 className='text-slate-500 text-base'>lorem ipsum dollar sit ammet, lorem ipsum dollar sit ammet...</h3>
+                        <div className='flex items-center justify-between'>
+                            <div>
+                                <p className='text-xl text-slate-600 font-semibold mt-3'>230tk</p>
+                                <p><del>300tk</del></p>
+                            </div>
+                            <FaCartArrowDown size={25} className="hidden product-item-cart text-slate-500" />
+                        </div>
+                    </Link>
+                </div>)
+            }
+        </div>
+        <div className='flex justify-center my-5'>
+            <button className='border-none outline-none px-2 py-1 text-sm font-semibold text-white bg-slate-700 rounded focus:outline-green-900'>see more</button>
         </div>
     </Layout>
   )

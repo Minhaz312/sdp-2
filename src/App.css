@@ -1,6 +1,3 @@
-/* .search-suggestion {
-  display: none;
-} */
-.search-input:focus .search-suggestion {
-  background-color: red;
+.product-item:hover .product-item-cart {
+  display: block;
 }

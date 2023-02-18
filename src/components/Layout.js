@@ -24,13 +24,18 @@ export default function Layout({children}) {
                         <h1 className='font-bold text-4xl'>BGCExpress</h1>
                     </div>
                     <div className='w-full px-32'>
-                        <div className='relative w-full'>
+                        <div className={`relative w-full ${showSuggestion?"drop-shadow-2xl":"shadow-none"}`}>
                             <div className='flex items-center w-full'>
                                 <input type="search" placeholder='Search your products...' className='search-input border-none bg-slate-100 w-full transition-all px-3 py-4 outline-none' onBlur={handleCloseSearchSuggestion} onFocus={handleSearchSuggestion} />
                                 <button className='px-3 py-4 outline-none border-none bg-black text-white font-semibold'>Search</button>
                             </div>
-                            <div className={`${showSuggestion?"block":"hidden"} h-32 bg-white shadow-lg w-full absolute top-full z-20 left-0 right-0`}>
-                                <span className='block text-center text-slate-500 mt-14'>start typing...</span>
+                            <div className={`${showSuggestion?"block":"hidden"} h-32 bg-white shadow-lg w-full absolute top-full z-20 left-0 right-0 min-h-[100px] h-auto`}>
+                                <p className='text-slate-500 text-md m-2'>hp monitor</p>
+                                <p className='text-slate-500 text-md m-2'>walton fridge</p>
+                                <p className='text-slate-500 text-md m-2'>samsung television</p>
+                                <p className='text-slate-500 text-md m-2'>Gacket</p>
+                                <p className='text-slate-500 text-md m-2'>water heater</p>
+                                {/* <span className='block text-center text-slate-500 mt-14'>start typing...</span> */}
                             </div>
                         </div>
                     </div>
@@ -74,6 +79,10 @@ export default function Layout({children}) {
                             <li className='my-2 hover:text-slate-100'>Home</li>
                             <li className='my-2 hover:text-slate-100'>Home</li>
                         </ul>
+                    </div>
+                    <div className='col-span-3'>
+                        <h3 className='text-lg font-bold text-white mb-3'>Get App On</h3>
+                        <img src="/images/get-inplay.png" style={{width:"200px",height:"auto"}} />
                     </div>
                 </div>
                 <div className='border-t border-slate-600 text-slate-300 my-3 py-3 text-center'>
