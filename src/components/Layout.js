@@ -43,13 +43,13 @@ export default function Layout({children}) {
                 <div className='p-5'>
                     <ul className='flex gap-5 items-center'>
                         <li>
-                            <NavLink className='flex items-center gap-1 text-xl'><AiFillHome />Home</NavLink>
+                            <NavLink to="/" className='flex items-center gap-1 text-xl'><AiFillHome />Home</NavLink>
                         </li>
                         <li>
-                            <NavLink className='flex items-center gap-1 text-xl'><BsCartFill />Cart</NavLink>
+                            <NavLink to="/profile/cart" className='flex items-center gap-1 text-xl'><BsCartFill />Cart</NavLink>
                         </li>
                         <li>
-                            <NavLink className='flex items-center font-bold gap-1 text-xl'><FaUser />Signin</NavLink>
+                            <NavLink to="/signin" className='flex items-center font-bold gap-1 text-xl'><FaUser />Signin</NavLink>
                         </li>
                     </ul>
                 </div>
