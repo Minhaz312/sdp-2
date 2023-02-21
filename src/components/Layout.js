@@ -16,7 +16,7 @@ export default function Layout({children}) {
     }
 
   return (
-    <div className='bg-slate-100 min-h-screen m-0 p-0 w-full'>
+    <div className='h-screen bg-slate-100 min-h-screen m-0 p-0 w-full'>
         <div className='w-full bg-white shadow-sm py-0 px-5 sticky top-0 z-20'>
             <nav className='w-4/5 mx-auto flex items-center py-2'>
                 <div className='flex w-full'>
